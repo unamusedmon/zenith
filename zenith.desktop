@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Zenith
+Comment=ADHD Focus Companion — Timer, Brain Dump, Breathing
+Exec=/home/zach/Current/zenith/run.sh
+Icon=/home/zach/Current/zenith/icons/zenith.svg
+Terminal=false
+Type=Application
+Categories=Utility;GTK;
+Keywords=focus;pomodoro;timer;adhd;breathing;
+StartupWMClass=com.zenith.app

@@ -1,0 +1,285 @@
+/* ═══════════════════════════════════════════
+   Zenith — Glassmorphic Dark Theme
+   ═══════════════════════════════════════════ */
+
+/* Root variables */
+window.background {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 50%, #0d0d0d 100%);
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Timer display */
+.timer-display {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-weight: 300;
+  color: #f0f0f0;
+  font-size: 64px;
+  letter-spacing: 4px;
+}
+
+.timer-label {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* Accent buttons */
+.accent-btn {
+  background: linear-gradient(135deg, #d4883e 0%, #c47a32 100%);
+  color: #0a0a0a;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 10px 28px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(212, 136, 62, 0.3);
+  transition: all 0.2s ease;
+}
+
+.accent-btn:hover {
+  background: linear-gradient(135deg, #e0994f 0%, #d4883e 100%);
+  box-shadow: 0 4px 20px rgba(212, 136, 62, 0.4);
+  transform: translateY(-1px);
+}
+
+.accent-btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 1px 6px rgba(212, 136, 62, 0.3);
+}
+
+.accent-btn:disabled {
+  opacity: 0.35;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Secondary button */
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px 24px;
+  transition: all 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Teal button */
+.teal-btn {
+  background: linear-gradient(135deg, #4a9e8e 0%, #3d8a7a 100%);
+  color: #0a0a0a;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 10px 28px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(74, 158, 142, 0.3);
+  transition: all 0.2s ease;
+}
+
+.teal-btn:hover {
+  background: linear-gradient(135deg, #55b39e 0%, #4a9e8e 100%);
+  box-shadow: 0 4px 20px rgba(74, 158, 142, 0.4);
+}
+
+.teal-btn:disabled {
+  opacity: 0.35;
+  box-shadow: none;
+}
+
+/* Preset pill buttons */
+.preset-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.preset-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.preset-btn.active {
+  background: rgba(212, 136, 62, 0.15);
+  color: #d4883e;
+  border-color: rgba(212, 136, 62, 0.3);
+}
+
+/* Text entry */
+.capture-entry {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: rgba(255, 255, 255, 0.9);
+  caret-color: #d4883e;
+}
+
+.capture-entry:focus {
+  border-color: rgba(212, 136, 62, 0.5);
+  box-shadow: 0 0 0 3px rgba(212, 136, 62, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.capture-entry placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* List items */
+.list-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px 14px;
+  transition: all 0.15s ease;
+}
+
+.list-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Energy emoji button */
+.energy-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 12px 8px;
+  transition: all 0.2s ease;
+}
+
+.energy-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.energy-btn.selected {
+  background: rgba(212, 136, 62, 0.15);
+  border-color: rgba(212, 136, 62, 0.3);
+  transform: scale(1.05);
+}
+
+/* Stats card */
+.stat-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 200;
+  color: #f0f0f0;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Page title */
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 13px;
+}
+
+/* Section headers */
+.section-header {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Empty state */
+.empty-state {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* Separator */
+.separator {
+  color: rgba(255, 255, 255, 0.06);
+}
+
+/* Breathing circle */
+.breath-circle {
+  border: 2px solid rgba(74, 158, 142, 0.5);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(74, 158, 142, 0.1),
+              inset 0 0 40px rgba(74, 158, 142, 0.05);
+}
+
+.breath-label {
+  color: rgba(74, 158, 142, 0.8);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* Navigation sidebar/tabbar */
+.tab-btn {
+  color: rgba(255, 255, 255, 0.35);
+  transition: color 0.2s ease;
+}
+
+.tab-btn.active {
+  color: #d4883e;
+}
+
+/* Close button for list items */
+.close-btn {
+  color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-btn:hover {
+  color: rgba(196, 90, 90, 0.8);
+  background: rgba(196, 90, 90, 0.1);
+}
+
+/* Reassurance banner */
+.reassurance {
+  background: rgba(106, 158, 106, 0.08);
+  border: 1px solid rgba(106, 158, 106, 0.15);
+  border-radius: 12px;
+  color: rgba(106, 158, 106, 0.8);
+  padding: 14px 18px;
+  font-size: 14px;
+}
