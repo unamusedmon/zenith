@@ -22,7 +22,9 @@ from src.breathing import BreathingCircle
 
 
 # ─── Resource paths ────────────────────────────────────────────
-RESOURCES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'resources')
+SRC_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(SRC_DIR)
+RESOURCES_DIR = os.path.join(PROJECT_DIR, 'resources')
 CSS_FILE = os.path.join(RESOURCES_DIR, 'style.css')
 
 
@@ -105,8 +107,8 @@ class TimerPage(Gtk.Box):
             btn.add_css_class("preset-btn")
             if mins == 25:
                 btn.add_css_class("active")
+            btn._minutes = mins
             btn.connect("clicked", self.on_preset, mins)
-            btn.set_data("minutes", mins)
             presets.append(btn)
 
         self.append(presets)
@@ -718,8 +720,12 @@ class ZenithApplication(Adw.Application):
 
 
 def main():
-    load_css()
     app = ZenithApplication()
+
+    def on_startup(app):
+        load_css()
+
+    app.connect('startup', on_startup)
     app.run(sys.argv)
 
 
